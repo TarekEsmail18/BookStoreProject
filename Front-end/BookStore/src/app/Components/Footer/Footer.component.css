@@ -1,0 +1,201 @@
+.footer
+{
+    padding-top:65px;
+    background-color: #282828;
+}
+.footer .row
+{
+    width: 1300px;
+}
+.footer .input-group
+{
+    margin-bottom: 20px;
+}
+.footer h5,.contact h5,.news h5,.social-media h5
+{
+    color: hsl(0, 100%, 99%);
+    text-transform: capitalize !important;
+    font-weight: 500 !important;
+    font-size: 25px;
+    margin-bottom: calc(31px - 7px);
+    margin: 0 0 31px;
+    letter-spacing: 0.05em;
+    line-height: 1.19em;
+    font-family: initial;
+}
+.footer .Publishers
+{
+    max-width: 22%;
+    text-align: left;
+}
+.footer .Publishers li
+{
+    /*width: 1000px;*/
+    margin-bottom: 10px;
+}
+.footer .Publishers a
+{
+    text-decoration: none;
+    color: #c4c4c4;
+    font-size: 17px;
+    text-transform: capitalize;
+    font-family: initial;
+}
+
+.footer .call,.email,.location
+{
+    color:#fefefebf;
+    margin-bottom: 15px;
+}
+.footer .call svg,.email svg,.location svg
+{
+    margin-right: 20px;
+}
+.contact
+{
+    max-width: 25%;
+    text-align: left;
+}
+.contact p,.news p
+{
+    color: #c4c4c4;
+    font-size: 17px;
+    line-height: 28px;
+    font-weight: 400;
+    font-family: initial;
+}
+.contact .social-icon a
+{
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.contact a,.news a,.auction-lab a
+{
+    text-decoration: none;
+    color: #fefefebf;
+}
+.contact li,.news li
+{
+    margin-bottom: 9px;
+}
+.news
+{
+    max-width: 25%;
+    text-align: left;
+}
+.news input
+{
+    background-color: transparent;
+    border: 1px solid #999;
+    color: #999;
+    position: relative;
+    width: 100%;
+    margin: 0 0 25px;
+    padding: 12px 19px;
+    font-size: 17px;
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: .07em;
+    font-family: serif;
+    line-height: 24px;
+    border-radius: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: border-color .2s ease-in-out;
+    -o-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
+}
+.news input:focus
+{
+    color: #fff;
+}
+.news input:focus::placeholder
+{
+    color: #fff;
+} 
+.news button
+{
+    background: transparent;
+    border: none;
+    position: relative;
+    left: 87.5%;
+    bottom: 18.2%;
+    color: #c4c4c4;
+    cursor: pointer;
+}
+.news button:hover
+{
+    color: #fff;
+    transition: all .2s ease-in-out;
+}
+.header
+{
+    display: flex;
+    margin-bottom: 15px;
+    margin-top: 12px;
+}
+.Header-icon 
+{
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 6px;
+}
+.Header-icon img 
+{
+    width: 30px;
+}
+.header-txt
+{
+    height: 0;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.header-txt h3
+{
+    color: #fff;
+    font-size: 18px;
+}
+.footer .social-media p
+{
+    color:#fefefebf;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+.social-media
+{
+    text-align: left;
+}
+.social-media li
+{
+    margin: 0 10px 10px 0;
+    max-width: 30%;
+    display: inline-block
+}
+.social-media li a img
+{
+    width: 100%;
+    background-size: cover;
+}
+.line
+{
+    color: #2b86e4db;
+    margin: 68px 105px 20px 233px;
+    height: 0px;
+}
+.footer-copyright
+{
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    font-size: 10px;
+    font-family: "Josefin Sans",sans-serif;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+}
+.footer-copyright span
+{
+    color: #c4c4c4;
+}

@@ -1,0 +1,53 @@
+<div class="shop-list">
+  <div class="shop-list-header">
+    <h4>Products</h4>
+    <h3>shop list</h3>
+  </div>
+</div>
+<div class="product-list">
+
+  <div class="inner-div">
+
+    <div  class="book-list" *ngFor="let book of BookPerPageList">
+      <div>
+        <div class="book-img" (mouseenter)="show = true" (mouseleave)="show = false" >
+          <a class="details-link" *ngIf="show" [@hoverAnimation]>Read MORE</a>
+          <img src="{{book.image}}" alt="">
+        </div>
+        <div class="text-book">
+          <div class="book-author">{{book.name}}</div>
+          <h5>xkjclzjcz</h5>
+          <div class="price">{{book.price}}</div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+  <nav aria-label="Page navigation example" class="page-nav">
+    <ul class="pagination">
+      <li class="page-item" (click)="activeFunPrev()" [ngClass]="active === 0?'disabled':''" *ngIf="NumberOfPages > 1"> 
+        <a class="page-link"  aria-label="Previous">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+          </svg>
+        </a>
+      </li>
+      <li class="page-item" *ngFor="let x of arr let i = index"><a class="page-link" (click)="active = i" [ngClass]="active === i ?'active':''" (click)="activeFunNumbers()">{{i+1}}</a></li>
+      <li class="page-item" (click)="activeFunNext()" [ngClass]="active === arr[arr.length-1]?'disabled':''" *ngIf="NumberOfPages > 1">
+        <a class="page-link"  aria-label="Next">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</div>

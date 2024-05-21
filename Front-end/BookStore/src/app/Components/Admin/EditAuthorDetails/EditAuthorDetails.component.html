@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="edit-book">
+    <h2>Update Author</h2>
+    <hr>
+    <div class="edit-book-body">
+      <form action="" (ngSubmit)="OnSubmit()">
+        <div>
+          <label for="">Author Name:</label>
+          <input type="text" [value]="authorById.name"  [(ngModel)]="authorById.name" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Books:</label>
+          <select name="" id="" [(ngModel)]="authorById.bookId" [ngModelOptions]="{standalone: true}">
+            <option value="{{authorById.bookId}}" id="BookCategory" selected disabled>{{authorById.book}}</option>          
+            <option value="{{book.id}}"  *ngFor="let book of Books">{{book.name}}</option>
+          </select>
+        </div>
+        <div>
+          <label for="">Country:</label>
+          <input type="text" [value]="authorById.country" [(ngModel)]="authorById.country" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Age:</label>
+          <input type="text" [value]="authorById.age" [(ngModel)]="authorById.age" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Birth Date:</label>
+          <input type="date" [value]="authorById.dateOfBirth" [(ngModel)]="authorById.dateOfBirth" [ngModelOptions]="{standalone: true}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

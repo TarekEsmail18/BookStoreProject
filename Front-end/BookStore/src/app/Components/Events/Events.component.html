@@ -1,0 +1,39 @@
+<div class="outer-event-header">
+  <div class="event-header">
+    <h4>info</h4>
+    <h3>event dates</h3>
+  </div>
+</div>
+
+
+<div class="event">
+  <div class="event-intro">
+    <h4>events</h4>
+    <h1>Book promotions</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  <div class="event-list" *ngFor="let list of eventList">
+    <div class="event-date-location-title">
+      <div class="event-date-location">
+        <div class="event-date"> 
+          <div class="date">{{list.eventDate}}</div>
+        </div>
+        <div class="event-holder">
+          <span>/</span>
+        </div>
+        <div class="event-location">
+          {{list.city}},{{list.country}}
+        </div>
+      </div>
+      <div class="event-title">
+        <a href="#">{{list.eventName}}</a>
+      </div>
+      <div class="event-buy-ticket">
+        <a href="#">see tickets</a>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="error" class="error-handel">
+    {{error}}
+  </div>
+</div>

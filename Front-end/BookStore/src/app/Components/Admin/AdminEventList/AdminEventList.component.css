@@ -1,0 +1,88 @@
+.book-list
+{
+    margin: 50px 0 50px 0;
+}
+.book-info
+{
+    display: flex;
+
+}
+.table button
+{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px 7px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    color: #333232bd;
+}
+.btn-add
+{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 2px 7px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    padding: 6px 7px;
+}
+img
+{
+    width: 33px;
+    height: 33px;
+}
+button svg
+{
+    margin-right: 4px;
+}
+.add-book
+{
+    margin: 50px 0 50px 0;
+}
+.confirm-delete-outer
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background-color: #7e7171ba;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in-out 0.5s;
+    visibility: hidden;
+}
+.confirm-delete-inner
+{
+    width: 550px;
+    height: 350px;
+    background-color: #fff;
+    align-items: center;
+    border-radius: 7px;
+}
+.confirm-delete-inner .text
+{
+    margin: 130px 40px 90px 40px;
+    text-align: center;
+}
+.confirm-delete-inner .buttons
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.close
+{
+    visibility: hidden;
+}
+.show
+{
+    visibility: visible;
+}

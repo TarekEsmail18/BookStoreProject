@@ -1,0 +1,109 @@
+<!--
+<div>
+  <img src="{{bookData.image}}" alt="">
+</div>
+<div>
+  <div>
+    <h3>{{bookData.author}}</h3>
+  </div>
+  <div>
+    <h2>{{bookData.name}}</h2>
+  </div>
+  <div>
+    <span>${{bookData.price}}</span>
+  </div>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit. Simul vidisse eu vim. Probo tincidunt ne vel.
+    </p>
+  </div>
+  <div>
+    <span>Categories: </span>
+    <span>{{bookData.categories}}</span>
+  </div>
+</div>
+-->
+
+
+
+
+<!------------------------------------------------------------------------------------------>
+
+
+<div class="container">
+  <div class="outer-div">
+    <div class="img-div">
+      <img src="{{bookData.image}}" alt="">
+    </div>
+    <div class="details">
+      <div class="author">
+        <h3>BY {{bookData.author}}</h3>
+      </div>
+      <div class="book-name">
+        <h2>{{bookData.name}}</h2>
+      </div>
+      <div class="price">
+        <span>$</span>
+        <span>{{bookData.price}}</span>
+      </div>
+      <div class="description">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit. Simul vidisse eu vim. Probo tincidunt ne vel.
+        </p>
+      </div>
+      <div class="categories">
+        <span>Categories: </span>
+        <span>{{bookData.categories}}</span>
+      </div>
+      <div class="add-cart">
+        <button class="btn btn-primary" (click)="AddToCart2()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+          </svg>
+          <span>Add To Cart</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">
+  <div class="outer-div">
+    <div class="img-div">
+      <img [src]="img" alt="">
+    </div>
+    <div class="details">
+      <div class="author">
+        <h3>BY JOHN STRASS</h3>
+      </div>
+      <div class="book-name">
+        <h2>Winter Darkest Tragedy</h2>
+      </div>
+      <div class="price">
+        <span>$</span>
+        <span>38.00</span>
+      </div>
+      <div class="description">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit. Simul vidisse eu vim. Probo tincidunt ne vel.
+        </p>
+      </div>
+      <div class="categories">
+        <span>Categories: </span>
+        <span>Best Sellers, Fantasy</span>
+      </div>
+    </div>
+  </div>
+  
+</div>-->
+

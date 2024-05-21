@@ -1,0 +1,34 @@
+<div class="slider-cart">
+  <div class="content">
+    <h3>Cart</h3>
+  </div>
+</div>
+<div class="container">
+  <table class="table" *ngIf="orderData.length != 0">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of orderData">
+        <td><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16" (click)="DeleteOrder(item)">
+          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+        </svg></td>
+        <td class="order-img"><img [src]="item.orderImage" alt=""></td>
+        <td>{{item.orderName}}</td>
+        <td>${{item.orderPrice}}</td>
+        <td>{{item.orderQuantity}}</td>
+        <td>$245</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="empty-order" *ngIf="orderData.length == 0">
+    <h1>No Order To show ! </h1>
+  </div>
+</div>

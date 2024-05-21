@@ -1,0 +1,57 @@
+.add-book
+{
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 30px 0;
+    padding-top: 20px;
+    border: none;
+    -webkit-box-shadow: 0px 4px 20px 0px rgb(44 101 144 / 10%);
+    box-shadow: 0px 4px 20px 0px rgb(44 101 144 / 10%);
+}
+.add-book h2
+{
+    margin: 5px 0px 20px 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+hr
+{
+    height: 0;
+}
+.add-book-body
+{
+    padding: 15px 0 20px 20px;
+}
+.add-book-body div
+{
+    margin-bottom: 20px;
+}
+.add-book-body label
+{
+    display: block;
+}
+.add-book-body input:not(input[type=file]),.add-book-body select 
+{
+    height: 37px;
+    line-height: 45px;
+    background: transparent;
+    border: 1px solid #f1f1f1;
+    font-size: 14px;
+    color: #a09e9e;
+    border-radius: 5px;
+    width: 98%;
+    padding: 0.375rem 0.75rem;
+    font-weight: 400;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.add-book-body input:focus:not(input[type=file]),.add-book-body select:focus 
+{
+    border-color: #0dd6b8;
+    outline: none;
+    color: rgb(0, 0, 0);
+}
+.form-control
+{
+    border:  1px solid #f1f1f1;
+    width: 98%;
+}

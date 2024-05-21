@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="add-book">
+    <h2>Add Books</h2>
+    <hr>
+    <div class="add-book-body">
+      <form action="" (ngSubmit)="OnSubmit()">
+        <div>
+          <label for="">Event Name:</label>
+          <input type="text" [(ngModel)]="eventData.eventName" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Event City:</label>
+          <input type="text" [(ngModel)]="eventData.city" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Event Country:</label>
+          <input type="text" [(ngModel)]="eventData.country" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Event Date:</label>
+          <input type="date" [(ngModel)]="eventData.eventDate" [ngModelOptions]="{standalone: true}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

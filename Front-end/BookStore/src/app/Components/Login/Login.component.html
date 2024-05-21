@@ -1,0 +1,57 @@
+<nav class="nav-bar">
+  <div class="nav-bar-txt" >
+    <h1>Login</h1>
+  </div>
+</nav>
+
+ 
+  <div class="signin" >
+    <!--<div class="photo" [ngStyle]="{'background-image': 'url('+ loginPhoto +')'}">
+      <h1>Hello Again</h1>
+      <p>Wellcome Back You've Been Missed</p>
+    </div>-->
+    <div class="login-form">
+      <div class="login-header">
+        <h2>Login Your Account</h2>
+      </div>
+      <form action="" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="username">
+          <label for="">Email*</label>
+          <input type="email" placeholder="Your Email" formControlName="Email" required >
+          <div *ngIf="loginForm.controls['Email'].invalid">
+            <div class="alert alert-danger" *ngIf="submitted || loginForm.controls['Email'].dirty || loginForm.controls['Email'].touched">
+              <div *ngIf="loginForm.controls['Email'].errors?.required">
+                this field is required
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="passowrd">
+          <label for="">Password*</label>
+          <input type="password" placeholder="Your password" formControlName="Password" required>
+          <div *ngIf="loginForm.controls['Password'].invalid">
+            <div class="alert alert-danger" *ngIf="submitted || loginForm.controls['Password'].dirty || loginForm.controls['Password'].touched">
+              <div *ngIf="loginForm.controls['Password'].errors?.required">
+                this field is required
+              </div>
+            </div>
+          </div>
+          <div class="alert alert-danger" *ngIf="notLogged">
+            {{errorMessage}}
+          </div>
+        </div>
+        <div class="forget-password">
+          <input type="checkbox">
+          <label for="">Remember Me</label>
+          <span>
+            <a href="#">Forgotten Password</a>
+          </span>
+        </div>
+        <input type="submit" value="LOGIN">
+      </form>
+      <div class="regster-div">
+        <a href="RegisterPage" class="regiseter">Register</a>
+      </div>
+    </div>
+  </div>
+

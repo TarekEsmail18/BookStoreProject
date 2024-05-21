@@ -1,0 +1,608 @@
+*
+{
+    padding:0px;
+    margin: 0px;
+    
+}
+.container-fluid
+{
+    width: 1410px;
+    margin: auto;
+    height: 85px;
+    padding-top: 7px;
+    align-items: baseline;
+}
+.Header-icon 
+{
+    /*padding: 4px;*/
+    border-radius: 6px;
+    margin-top: 5px;
+}
+.Header-icon img 
+{
+    width: 60px;
+}
+.links
+{
+    margin-left: 35px;
+    color: #555;
+}
+.links ul
+{
+    margin-top: 10px;
+    color: #555;
+}
+.links li
+{
+    margin-right: 35px;
+    font-size: 17px;
+    font-weight: 400;
+    font-family: "Cormorant Garamond",sans-serif;
+    color: #555;
+}
+.active a
+{
+    color:#d14031 !important;
+}
+.links ul li a:hover
+{
+    color: #d14031;
+}
+.links .nav-item a
+{
+    color: #555;
+}
+
+.links li.dropdown a
+{
+    text-decoration: none;
+    color: #555;
+}
+.header-cart
+{
+    width: 7%;
+    height: 95%;
+}
+.header-cart a
+{
+    text-decoration: none;
+    color: #000;
+    line-height: 3;
+    transition: color .2s ease-out;
+    cursor: pointer;
+}
+.header-cart a:hover
+{
+    color: #d14031;
+}
+.header-cart a span.cart
+{
+    margin-right: 15px;
+}
+.header-cart .count
+{
+    font-family: "Josefin Sans",sans-serif;
+    color: #fff;
+    background-color: #d14031;
+    border-radius: 50%;
+    position: absolute;
+    top: 14px;
+    left: 22%;
+    text-align: center;
+    line-height: 16px!important;
+    width: 15px;
+    height: 15px;
+    transform: translateX(-40%);
+    font-size: 8px;
+}
+.header-cart a span.money
+{
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 4px;
+    position: absolute;
+}
+.header-cart a span.money::after
+{
+    content: "";
+    border: solid;
+    border-width: 0 1.5px 0 0;
+    display: inline-block;
+    padding: 7.33px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(0deg);
+    height: 13px;
+    margin-top: 15px;  
+} 
+.header-cart .header-dropdown
+{
+    position: absolute;
+    top: 158%;
+    left: auto;
+    right: 35px;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-height: 0;
+    /*overflow: hidden;*/
+    will-change: transform;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    /*display: none;*/
+    z-index: 1;
+    /*display: none;*/
+    margin-top: -43px;
+    
+}
+.header-cart .header-dropdown .dropdown-inner
+{
+    position: relative;
+    width: 300px;
+    padding: 30px;
+    vertical-align: middle;
+    background-color: #fff;
+    border-top: 1px solid #f7f3f1;
+    box-sizing: border-box;
+    /*z-index: 1111111111111111111;*/
+}
+.header-cart .header-dropdown .content
+{
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+.header-cart .header-dropdown .content .img
+{
+    width: 50px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-right: 12px;
+    margin-top: 3px;
+}
+.header-cart .header-dropdown .content .img img
+{
+    max-width: 100%;
+    max-height: 100%;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.header-cart .header-dropdown .content .book-name 
+{
+    width: 50%;
+    margin-right: 39px;
+}
+.header-cart .header-dropdown .content .book-name p
+{
+    word-wrap: break-word;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 17px;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+    max-width: 68%;
+}
+.header-cart .header-dropdown .content .price
+{
+    color: #999;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+}
+.header-cart .header-dropdown .content .close
+{
+    position: relative;
+    right: 0px;
+    top: -5px;
+    cursor: pointer;
+}
+.header-cart .header-dropdown .total-price
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.header-cart .header-dropdown .total-price span
+{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.header-cart .header-dropdown .view-cart a
+{
+    display: flex;
+    justify-content: space-around;
+    background: transparent;
+    border: 1px solid #0e0d0d;
+    cursor: pointer;
+    font-family: Courier;
+    height: 43px;
+    line-height: 3.2;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: all ease-in-out 0.4s;
+}
+.header-cart .header-dropdown .view-cart a:hover
+{
+    color: #fff;
+    background-color: #000;
+}
+.header-cart input
+{
+    border-radius: 20px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 380px;
+    border-color: black;
+}
+.header-cart input:focus
+{
+    outline: none;
+}
+.header-cart button
+{
+    border: none;
+    background: none;
+    margin-left: -34px !important;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.search .bi-search
+{
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+.search .bi-search:hover
+{
+    color: #d14031;
+    transition: color .2s ease-out;
+}
+.dropdown-search
+{
+    position: absolute;
+    padding: 15px 49px 26px;
+    margin: 0;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 4px 5px 0 rgb(0 0 0 / 25%);
+    z-index: 999;
+    left: 80.8%;
+    top: 88%;
+    transition: all .2s ease-in-out;
+    color: #4d4646b0;
+}
+.dropdown-search .email
+{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 11px;
+    padding-bottom: 6px;
+}
+.dropdown-search .user-name
+{
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 11px;
+    padding-bottom: 6px;
+}
+.dropdown-search .logout
+{
+    text-align: center;
+}
+.dropdown-search .logout a
+{
+    color: #4d4646b0;
+    font-size: 20px;
+    cursor: pointer;
+}
+.dropdown-search .logout a:hover
+{
+    text-decoration: none;
+    color: #0dd6b8;
+}
+.dropdown-search .form-holder
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    border-bottom: 1px solid #575757;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input 
+{
+    width: calc(100% - 40px);
+    padding: 0 0 0 7px;
+    letter-spacing: 0;
+    font-size: 19px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    height: 44px;
+    line-height: 42px;
+    color: #555;
+    background-color: transparent;
+    font-family: "Cormorant Garamond",sans-serif;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: color .2s ease-out;
+    -o-transition: color .2s ease-out;
+    transition: color .2s ease-out;
+    font-weight: 300;
+    text-transform: capitalize;
+    writing-mode: horizontal-tb !important;
+    text-indent: 0px;
+    text-shadow: none;
+}
+button
+{
+    font-size: 12px;
+    line-height: 1em;
+    color: #fff;
+    letter-spacing: .35em;
+    font-family: "Josefin Sans",sans-serif;
+    width: 40px;
+    padding: 0;
+    text-align: right;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    height: 44px;
+    line-height: 42px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: color .2s ease-out;
+    -o-transition: color .2s ease-out;
+    transition: color .2s ease-out;
+    writing-mode: horizontal-tb !important;
+    font-weight: bold;
+}
+/*input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}*/
+.login-icon
+{
+    color: black;
+}
+.login
+{
+  position: relative;
+  box-sizing: border-box;
+  margin-right: 35px;
+  
+}
+.search::after
+{
+    /*content: " ";
+    display: block;
+    position: absolute;
+    height: 28px;
+    background: black;
+    width: 2px;
+    left: 177%;
+    top: calc(10% - 3px);*/
+    content: "";
+    border: solid;
+    border-width: 0 1.5px 0 0;
+    display: inline-block;
+    padding: 7.33px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(0deg);
+    height: 13px;
+    margin-top: 7px;
+    position: absolute;
+}
+.messageUs
+{
+    margin-top: 2px;
+    
+}
+.messageUs .bi-list
+{
+    cursor: pointer;
+    color: #343a40;
+}
+.message
+{
+    right: 0;
+    position: fixed;
+    visibility: visible;
+    z-index: 10000;
+    padding: 30px;
+    top: 0;
+    background-color: #fff;
+    text-align: left;
+    box-shadow: -3px 0 3px rgb(0 0 0 / 4%);
+    transition: all .6s cubic-bezier(.77,0,.175,1);
+    height: 100%;
+}
+.message .message-container
+{
+    position: relative;
+    padding: 20px;
+}
+.message .message-container .exit 
+{
+    position: absolute;
+    top: 0px !important;
+    right: 0px !important;
+    color: #000 !important;
+}
+.message .message-icon
+{
+    margin: 60px 0px 45px 0px;
+} 
+.message .message-icon img
+{
+    width: 60px;
+}
+.message .message-container ul
+{
+    list-style: none;
+}
+.message .message-container ul li
+{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.message .message-container ul li .bi
+{
+    margin-right: 20px;
+}
+.message .message-container ul li p
+{
+    font-size: 15px;
+    font-weight: 400;
+}
+.message .message-container input
+{
+    position: relative;
+    width: 100%;
+    margin: 30px 0 30px;
+    padding: 12px 19px;
+    font-size: 17px;
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: .07em;
+    font-family: "Cormorant Garamond",sans-serif;
+    line-height: 24px;
+    color: #999;
+    background-color: transparent;
+    border: 1px solid #e1e1e1;
+    border-radius: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: border-color .2s ease-in-out;
+    -o-transition: border-color .2s ease-in-out;
+    transition: border-color .2s ease-in-out;
+}
+.message .message-container input::placeholder
+{
+    color: #999;
+    font-size: 15px;
+    font-weight: 100;
+}
+.message .message-container input:focus
+{
+    color: #000;
+}
+.message .message-container .sub
+{   
+    color: #fff;
+    background-color: #d14031;
+    border: 1px solid transparent;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 7px 21px 10px 26px;
+    line-height: 31px;
+    letter-spacing: .35em;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.message .message-container .social-icon a
+{
+    text-decoration: none;
+    color: #000;
+    margin-right: 20px;
+}
+.message .message-container .message-text
+{
+    color: #000;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.35em;
+    line-height: 16px;
+    margin-top: 20px;
+    display: block;
+    font-family: 'Josefin Sans';
+}
+.Admin-dashboard
+{
+    margin-bottom: 200px;
+}
+.Admin-dashboard h2
+{
+    color: #777D74;
+    font-size: 29px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-family: 'Josefin Sans';
+}
+.Admin-dashboard .link-list
+{
+    margin-top: 20px;
+}
+.Admin-dashboard .link-list ul li
+{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+}
+.Admin-dashboard .link-list ul li a
+{
+    color: #777D74;
+    width: 100%;
+    height: 100%;
+    padding: 12px 0px 12px 14px;
+    transition: all 0.5s ease-out 0.1ms;
+    display: flex;
+    align-items: center;
+}
+.Admin-dashboard .link-list ul li a:hover
+{
+    text-decoration: none;
+    background-color: #fbfcff;
+    color: #0dd6b8;
+}
+.Admin-dashboard .link-list ul li a svg
+{
+    margin-right: 7px;
+}
+.Active
+{
+    text-decoration: none;
+    background-color: #fbfcff;
+    color: #0dd6b8 !important;
+}
+/*.hover
+{
+    display: block !important;
+    transition: all 5s ease-in-out;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+}*/

@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="edit-book">
+    <h2>Update Book</h2>
+    <hr>
+    <div class="edit-book-body">
+      <form action="" (ngSubmit)="OnSubmit()">
+        <div>
+          <label for="">Book Name:</label>
+          <input type="text" [value]="bookbyid.name"  [(ngModel)]="bookbyid.name" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Book Author:</label>
+          <select name="" id="" [(ngModel)]="bookbyid.authorId" [ngModelOptions]="{standalone: true}">
+            <option value="{{bookbyid.authorId}}" id="BookCategory" selected disabled>{{bookbyid.author}}</option>          
+            <option value="{{author.id}}"  *ngFor="let author of author">{{author.name}}</option>
+          </select>
+          <!--<input type="text" [value]="bookbyid.author" [(ngModel)]="bookbyid.author" [ngModelOptions]="{standalone: true}">-->
+        </div>
+        <div>
+          <label for="">Book Category:</label>
+          <select name="" id="" [(ngModel)]="bookbyid.categories" [ngModelOptions]="{standalone: true}">
+            <option value="" id="BookCategory" selected disabled>Book Category</option>          
+            <option value="History">History</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Best Seller">Best Seller</option>
+            <option value="Art">Art</option>
+            <option value="Love Stories">Love Stories</option>   
+          </select>
+          <!--<input type="text" [value]="bookbyid.categories" [(ngModel)]="bookbyid.categories" [ngModelOptions]="{standalone: true}">-->
+        </div>
+        <div>
+          <label for="">Book Price:</label>
+          <input type="text" [value]="bookbyid.price" [(ngModel)]="bookbyid.price" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Book Image:</label>
+          <input class="form-control" type="file" value="{{bookbyid.image}}"  (change)="uploadPhoto($event)" [(ngModel)]="bookbyid.image" [ngModelOptions]="{standalone: true}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

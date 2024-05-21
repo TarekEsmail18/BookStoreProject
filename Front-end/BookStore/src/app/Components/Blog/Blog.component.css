@@ -1,0 +1,74 @@
+.blog
+{
+
+}
+.blog .first-section,.blog .second-section
+{
+    margin: auto;
+    max-width: 1311px;
+    margin-top: 40px;
+}
+.blog .first-section .img, .blog .second-section .img
+{
+    margin-bottom: 20px;
+}
+.blog .first-section .paragraph,.blog .second-section .paragraph
+{
+    margin-bottom: 70px;
+}
+.blog .first-section .paragraph h4, .blog .second-section .paragraph h4
+{
+    color: #999;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .35em;
+    margin-bottom: 10px;
+}
+.blog .first-section .paragraph h2, .blog .second-section .paragraph h2
+{
+    color: #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    letter-spacing: .01em;
+    margin-bottom: 15px;
+}
+.blog .first-section .paragraph p, .blog .second-section .paragraph p
+{
+    width: 1211px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #625252;
+    font-size: 17px;
+}
+.blog .first-section .note,.blog .second-section .note
+{
+    background-color: #fbf9f6;
+    padding: 35px 98px 46px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.blog .first-section .note span, .blog .second-section .note span
+{
+    color: #d14031;
+    font-size: 140px;
+    margin-bottom: -70px;
+}
+.blog .first-section .note p,.blog .second-section .note p
+{
+    color: #000;
+    font-weight: 500;
+    letter-spacing: .01em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+.blog .first-section .note h3,.blog .second-section .note h3
+{
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: .35em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+}

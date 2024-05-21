@@ -1,0 +1,399 @@
+<div id="slider" class="carousel slide hidden-xs" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <!--<li data-target="#slider" data-slide-to="0" class="active"></li>
+    <li data-target="#slider" data-slide-to="1"></li>
+    <li data-target="#slider" data-slide-to="2"></li>
+    <li data-target="#slider" data-slide-to="3"></li>-->
+    <li data-target="#slider" data-slide-to="3" *ngFor="let dot of items; let i = index" [ngClass]="{'active': index === i}" (click)="selectItem(i)"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item " *ngFor="let item of items; let i = index " [ngClass]="{'active': index === i}">
+      <img [src]="item.imagesrc" alt="..." style="width: 50%; height: 50%">
+      <!--<div class="carousel-caption">
+        <p class="lead">{{item.par}}</p>
+      </div>-->
+    </div>
+    <!--<div class="item">
+      <img src="../../../assets/images/download.jpg" alt="...">
+      <div class="carousel-caption">
+        <h1>Web Design</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="../../../assets/images/download.jpg" alt="...">
+      <div class="carousel-caption">
+        <h1>Desktop</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="../../../assets/images/download.jpg" alt="...">
+      <div class="carousel-caption">
+        <h1>Web Hosting</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+    </div>-->
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control"  role="button" data-slide="prev" (click)="OnPrevSelect()">
+    <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+    <svg xmlns="http://www.w3.org/2000/svg" width="55px" height="88px" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+    </svg>
+  </a>
+  <a class="right carousel-control"  role="button" data-slide="next" (click)="OnNextClick()">
+    <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+    <svg xmlns="http://www.w3.org/2000/svg" width="55px" height="88px" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+    </svg>
+  </a>
+</div>
+
+
+
+<div class="container">
+  <!--<ngb-carousel *ngIf="images">
+    <ol role="tablist" class="carousel-indicators"><li style="display: none;" role="tab" class="active" aria-labelledby="slide-ngb-slide-0" aria-controls="slide-ngb-slide-0" aria-selected="true"></li><li role="tab" aria-labelledby="slide-ngb-slide-1" aria-controls="slide-ngb-slide-1" aria-selected="false"></li><li role="tab" aria-labelledby="slide-ngb-slide-2" aria-controls="slide-ngb-slide-2" aria-selected="false"></li><li role="tab" aria-labelledby="slide-ngb-slide-3" aria-controls="slide-ngb-slide-3" aria-selected="false"></li>
+      </ol>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide" style="width: 100%"/>
+      </div>
+      <div class="carousel-caption">
+        <h3>10 seconds between slides...</h3>
+        <p>This carousel uses customized default values.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[1]" alt="Random second slide"  style="width: 100%"/>
+      </div>
+      <div class="carousel-caption">
+        <h3>No mouse events...</h3>
+        <p>This carousel doesn't pause or resume on mouse events</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[2]" alt="Random third slide"  style="width: 100%"/>
+      </div>
+      <div class="carousel-caption">
+        <h3>No keyboard...</h3>
+        <p>This carousel uses customized default values.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[3]" alt="Random fourth slide"  style="width: 100%"/>
+      </div>
+      <div class="carousel-caption">
+        <h3>And no wrap after last slide.</h3>
+        <p>This carousel uses customized default values.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>-->
+
+  <div class="cat-list">
+    <ul>
+      <li>
+        <button (click)="ShowAllBook()"  [ngClass]="{'active': tab==='tab1'}" (click)="active(1)">All</button> 
+      </li>
+      <li>
+        <button (click)="GetBookByCat('Best Sellers')"  [ngClass]="{'active': tab==='tab2'}" (click)="active(2)">Best Sellers</button>
+      </li>
+      <li>
+        <button (click)="GetBookByCat('Fantasy')"  [ngClass]="{'active': tab==='tab3'}" (click)="active(3)">Fantasy</button>
+      </li>
+      <li>
+        <button (click)="GetBookByCat('History')" [ngClass]="{'active': tab==='tab4'}" (click)="active(4)">History</button> 
+      </li>
+      <li>
+        <button (click)="GetBookByCat('Art')" [ngClass]="{'active': tab==='tab5'}" (click)="active(5)">Art</button>
+      </li>
+      <li>
+        <button (click)="GetBookByCat('Love Stories')"  [ngClass]="{'active': tab==='tab6'}" (click)="active(6)">Love Stories</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div class="inner">
+  <div *ngIf="!byCat" class="book-list" >
+    <div *ngFor="let book of mainBook; let i = index">
+      <div class="book-img" (mouseenter)="show  = i" (mouseleave)="show = -1">
+        <a *ngIf="(show === i)" (click)="goToDetails(book.id)" class="details-link">Read MORE</a>
+        <img src="{{book.image}}" alt="">
+      </div>
+      <div class="text-book">
+        <div class="book-author">{{book.author}}</div>
+        <h5>{{book.name}}</h5>
+        <div class="price">${{book.price}}</div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div *ngIf="byCat" class="book-list">
+    <div  *ngFor="let bookCat of BookByCat; let i = index" >
+      <div class="book-img" (mouseenter)="show  = i" (mouseleave)="show = -1">
+        <a *ngIf="(show === i)" (click)="goToDetails(bookCat.id)" class="details-link">READ MORE</a>
+        <img src="{{bookCat.image}}" alt="">
+      </div>
+      <div class="text-book">
+        <div class="book-author">{{bookCat.author}}</div>
+        <h5>{{bookCat.name}}</h5>
+        <div class="price">${{bookCat.price}}</div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!------------------------------------------------------------------------------------------------------------------------------>
+
+  <!--<div  class="book-list">
+    <div class="book-img" (mouseover)="show = true" (mouseout)="show = false">
+      <a *ngIf="show" routerLink="bookDetails" class="details-link">Read MORE</a>
+      <img [src]="img" alt="">
+    </div>
+    <div class="text-book">
+      <div class="book-author">JOHN STRASS</div>
+      <h5>Winter Darkest Tragedy</h5>
+      <div class="price">$38</div>
+    </div>
+  </div>
+  <div  class="book-list">
+    <div class="book-img" (mouseenter)="ShowLink()" (mouseleave)="HiddenLink()">
+      <a *ngIf="show" routerLink="bookDetails" class="details-link">Read MORE</a>
+      <img [src]="img" alt="">
+    </div>
+    <div class="text-book">
+      <div class="book-author">JOHN STRASS</div>
+      <h5>Winter Darkest Tragedy</h5>
+      <div class="price">$38</div>
+    </div>
+  </div><div  class="book-list">
+    <div class="book-img" (mouseenter)="ShowLink()" (mouseleave)="HiddenLink()">
+      <a *ngIf="show" routerLink="bookDetails" class="details-link">Read MORE</a>
+      <img [src]="img" alt="">
+    </div>
+    <div class="text-book">
+      <div class="book-author">JOHN STRASS</div>
+      <h5>Winter Darkest Tragedy</h5>
+      <div class="price">$38</div>
+    </div>
+  </div>-->
+
+
+
+
+</div>
+
+
+
+<div class="service"> 
+  <div class="inner-service">
+    <span>❦</span>
+    <h4>OUR SERVICES</h4>
+    <p>Aorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+    <div class="button-service">
+      <a href="">READ MORE</a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="authors">
+  <div class="inner-authors">
+    <h4> our services</h4>
+    <h1>Authors of the month</h1>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <div class="row authors-photo">
+    <div class="col-sm author-info" *ngFor="let author of author">
+      <img src="{{author.img}}" alt="">
+      <h4>{{author.title}}</h4>
+      <h3>Adam Strass</h3>
+      <p>Except sint occaecat cupidatat non proident, sunt culpa qui officia deserunt mollit.</p>
+    </div>
+    <!--  
+    <div class="col-sm author-info">
+      <img src="../../../assets/images/team-1.png" alt="">
+      <h4>AUTHOR</h4>
+      <h3>Adam Strass</h3>
+      <p>Except sint occaecat cupidatat non proident, sunt culpa qui officia deserunt mollit.</p>
+    </div>
+    <div class="col-sm author-info">
+      <img src="../../../assets/images/team-1.png" alt="">
+      <h4>AUTHOR</h4>
+      <h3>Adam Strass</h3>
+      <p>Except sint occaecat cupidatat non proident, sunt culpa qui officia deserunt mollit.</p>
+    </div>
+    <div class="col-sm author-info">
+      <img src="../../../assets/images/team-1.png" alt="">
+      <h4>AUTHOR</h4>
+      <h3>Adam Strass</h3>
+      <p>Except sint occaecat cupidatat non proident, sunt culpa qui officia deserunt mollit.</p>
+    </div>
+    <div class="col-sm author-info">
+      <img src="../../../assets/images/team-1.png" alt="">
+      <h4>AUTHOR</h4>
+      <h3>Adam Strass</h3>
+      <p>Except sint occaecat cupidatat non proident, sunt culpa qui officia deserunt mollit.</p>
+    </div>
+    -->
+  </div>
+</div>
+
+<!--end of authors-->
+
+
+
+<!--start guest of month-->
+
+
+<div class="guest-of-month">
+  <div class="inner-div">
+    <div class="info">
+      <h4>autobiography</h4>
+      <h3>This month's guest host</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+      <a href="#">read more</a>
+    </div>
+    <div class="photos-tricks">
+      <img class="img-1" src="../../../assets/images/home-2-rev-2-img-2.jpg" alt="">
+      <img class="img-2" src="../../../assets/images/home-2-rev-2-img-3.jpg" alt="">
+      <img class="img-3" src="../../../assets/images/home-2-rev-2-img-4.png" alt="">
+      <img class="img-4" src="../../../assets/images/home-2-rev-2-img-5.png" alt="">
+      <img class="img-5" src="../../../assets/images/home-2-rev-2-img-6.png" alt="">
+      <img class="img-6" src="../../../assets/images/home-2-rev-2-img-7.png" alt="">
+
+    </div>
+  </div>
+  
+</div>
+
+<!--end guest of month-->
+
+
+<!--start Travelogue of the year-->
+
+<div class="travel-of-month">
+  <div class="inner-div">
+    <div class="photos-tricks">
+      <img class="img-1" src="../../../assets/images/home-2-rev-3-img-6.jpg" alt="">
+      <img class="img-2" src="../../../assets/images/home-2-rev-3-img-5.jpg" alt="">
+      <img class="img-3" src="../../../assets/images/home-2-rev-3-image-4.png" alt="">
+      <img class="img-4" src="../../../assets/images/home-2-rev-3-image-3.png" alt="">
+      <img class="img-5" src="../../../assets/images/home-2-rev-3-image-2.png" alt="">
+      <img class="img-6" src="../../../assets/images/home-2-rev-3-image-1.png" alt="">
+
+    </div>
+    <div class="info">
+      <h4>autobiography</h4>
+      <h3>Travelogue of the year</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+      <a href="#">read more</a>
+    </div>
+  </div>
+</div>
+
+
+<!--end Travelogue of the year-->
+
+
+<!--start image session-->
+
+
+<div class="photo-session">
+  <div class="inner-div">
+    <div class="img-1"><img src="../../../assets/images/home-2-gallery-1.jpg" alt=""></div>
+    <div class="img-2"><img src="../../../assets/images/home-2-gallery-2.jpg" alt=""></div>
+    <div class="img-3"><img src="../../../assets/images/home-2-gallery-3.jpg" alt=""></div>
+    <div class="img-4"><img src="../../../assets/images/home-2-gallery-4.jpg" alt=""></div>
+    <div class="img-5"><img src="../../../assets/images/home-2-gallery-5.jpg" alt=""></div>
+    <div class="img-6"><img src="../../../assets/images/home-2-gallery-8.jpg" alt=""></div>
+    <div class="img-7"><img src="../../../assets/images/home-2-gallery-9.jpg" alt=""></div>
+    <div class="img-8"><img src="../../../assets/images/home-2-gallery-10.jpg" alt=""></div>
+    <div class="img-9"><img src="../../../assets/images/home-2-gallery-11.jpg" alt=""></div>
+    <div class="img-10"><img src="../../../assets/images/home-2-gallery-12.jpg" alt=""></div>
+    <div class="img-11"><img src="../../../assets/images/home-2-gallery-6.jpg" alt=""></div>
+    <div class="img-12"><img src="../../../assets/images/home-2-gallery-7.jpg" alt=""></div>
+
+  </div>
+</div>
+
+
+<!--end image session-->
+
+
+
+<!--start Event section-->
+
+<div class="event">
+  <div class="event-intro">
+    <h4>events</h4>
+    <h1>Book promotions</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </div>
+  <div class="event-list" *ngFor="let list of eventList">
+    <div class="event-date-location-title">
+      <div class="event-date-location">
+        <div class="event-date"> 
+          <div class="date">{{list.eventDate|date:'dd.MM.yyyy'}}</div>
+        </div>
+        <div class="event-holder">
+          <span>/</span>
+        </div>
+        <div class="event-location">
+          {{list.city}}, {{list.country}}
+        </div>
+      </div>
+      <div class="event-title">
+        <a href="#">{{list.eventName}}</a>
+      </div>
+      <div class="event-buy-ticket">
+        <a href="#">see tickets</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--end Event section-->
+
+
+
+<div class="logo-section">
+  <div class="inner-logo">
+    <ul>
+        <li>
+          <a href="#"><img src="../../../assets/images/home-2-client-1.png" alt=""></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../assets/images/home-2-client-2.png" alt=""></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../assets/images/home-2-client-3.png" alt=""></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../assets/images/home-2-client-4.png" alt=""></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../assets/images/home-2-client-5.png" alt=""></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../assets/images/home-2-client-6.png" alt=""></a>
+        </li>
+    </ul>
+  </div>
+</div>

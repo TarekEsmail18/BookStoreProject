@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="cat-list">
+    <ul>
+      <li>
+        <a href="" class="active">All</a> 
+      </li>
+      <li>
+        <a href="">Best Sellers</a>
+      </li>
+      <li>
+        <a href="">Fantasy</a>
+      </li>
+      <li>
+        <a href="">History</a>
+      </li>
+      <li>
+        <a href="">Art</a>
+      </li>
+      <li>
+        <a href="">Love Stories</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="inner">
+  
+
+
+
+  
+    <div  *ngFor="let bookCat of BookByCat; let i = index" class="book-list" >
+      <div class="book-img" >
+        <img src="{{bookCat.image}}" alt="">
+      </div>
+      <div class="text-book">
+        <div class="book-author">{{bookCat.author}}</div>
+        <h5>{{bookCat.name}}</h5>
+        <div class="price">${{bookCat.price}}</div>
+      </div>
+    </div>
+
+
+
+  
+
+
+
+
+</div>

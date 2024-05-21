@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="edit-book">
+    <h2>Update Book</h2>
+    <hr>
+    <div class="edit-book-body">
+      <form action="" (ngSubmit)="OnSubmit()">
+        <div>
+          <label for="">Event Name:</label>
+          <input type="text" [value]="eventbyid.eventName"  [(ngModel)]="eventbyid.eventName" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">City:</label>
+          <input type="text" [value]="eventbyid.city" [(ngModel)]="eventbyid.city" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Country:</label>
+          <input type="text" [value]="eventbyid.country" [(ngModel)]="eventbyid.country" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Event Date:</label>
+          <input type="date" [value]="eventbyid.eventDate" [(ngModel)]="eventbyid.eventDate" [ngModelOptions]="{standalone: true}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

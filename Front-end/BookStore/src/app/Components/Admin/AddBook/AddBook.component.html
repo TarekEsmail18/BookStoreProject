@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="add-book">
+    <h2>Add Books</h2>
+    <hr>
+    <div class="add-book-body">
+      <form action="" (ngSubmit)="OnSubmit()">
+        <div>
+          <label for="">Book Name:</label>
+          <input type="text" [(ngModel)]="BookData.name" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Book Author:</label>
+          <!--<input type="text" [(ngModel)]="BookData.author" [ngModelOptions]="{standalone: true}">-->
+          <select name="" id="" [(ngModel)]="BookData.authorId"  [ngModelOptions]="{standalone: true}">
+            <option value="" id="" selected disabled>Author</option>          
+            <option value="{{author.id}}"  *ngFor="let author of author">{{author.name}}</option>
+          </select>
+        </div>
+        <div>
+          <label for="BookCategory">Book Category:</label>
+          <!--<input type="text" [(ngModel)]="BookData.categories" [ngModelOptions]="{standalone: true}">-->
+          <select name="" id="" [(ngModel)]="BookData.categories" [ngModelOptions]="{standalone: true}">
+            <option value="" id="BookCategory" selected disabled>Book Category</option>          
+            <option value="History">History</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Best Seller">Best Seller</option>
+            <option value="Art">Art</option>
+            <option value="Love Stories">Love Stories</option>   
+          </select>
+        </div>
+        <div>
+          <label for="">Book Price:</label>
+          <input  type="text" [(ngModel)]="BookData.price" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div>
+          <label for="">Book Image:</label>
+          <input class="form-control"  type="file" (change)="uploadPhoto($event)" [(ngModel)]="BookData.image" [ngModelOptions]="{standalone: true}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

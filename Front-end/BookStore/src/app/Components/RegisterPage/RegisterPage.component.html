@@ -1,0 +1,99 @@
+<nav class="nav-bar" >
+  <div class="nav-bar-txt" >
+    <h1>Register</h1>
+  </div>
+</nav>
+<div class="container">
+ 
+  <div class="signin">
+    <!--<div class="photo" [ngStyle]="{'background-image': 'url('+ registerPhoto +')'}">
+      <h1>Hello Again</h1>
+      <p>Wellcome Back You've Been Missed</p>
+    </div>-->
+    <div class="login-form">
+      <div class="login-header">
+        <h2>Register Your Account</h2>
+      </div>
+      <form focusInvalidInput action="" [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)">
+        <div class="username">
+          <label for="">User Name*</label>
+          <input type="text" placeholder="Your user name" formControlName="UserName" required >
+          <div *ngIf="registerForm.controls['UserName'].invalid">
+            <div class="alert alert-danger" *ngIf="submitted || registerForm.controls['UserName'].touched || registerForm.controls['UserName'].dirty">
+               <div *ngIf="registerForm.controls['UserName'].errors?.required">
+                this failed required
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="username">
+          <label for="">FullName*</label>
+          <input type="text" placeholder="Your user name" formControlName="FullName" required >
+          <div *ngIf="registerForm.controls['FullName'].invalid">
+            <div class="alert alert-danger" *ngIf="submitted || registerForm.controls['FullName'].touched || registerForm.controls['FullName'].dirty">
+               <div *ngIf="registerForm.controls['FullName'].errors?.required">
+                this failed required
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="email">
+          <label for="">Email*</label>
+          <input type="email" placeholder="Your Email" formControlName="email" required >
+          <div *ngIf="registerForm.controls['email'].invalid">
+            <div class="alert alert-danger" *ngIf="submitted || registerForm.controls['email'].touched || registerForm.controls['email'].dirty">
+              <div *ngIf="registerForm.controls['email'].errors?.required">
+               this failed required
+              </div>
+              <div *ngIf="registerForm.controls['email'].errors?.pattern">
+                Email Invalid
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="passowrd">
+          <label for="">Password*</label>
+          <input type="password" placeholder="Your password" formControlName="password" required >
+          <div *ngIf="registerForm.controls['password'].invalid">
+            <div class="alert alert-danger" *ngIf="submitted || registerForm.controls['password'].touched || registerForm.controls['password'].dirty">
+              <div *ngIf="registerForm.controls['password'].errors?.required">
+               this failed required
+              </div>
+              <div *ngIf="registerForm.controls['password'].errors?.minlength">
+                Password must be at least 5 letter long
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="passowrd">
+          <label for="">Confirm Password*</label>
+          <input type="password" placeholder="Your password" formControlName="confirmPassword"  required>
+          <div *ngIf="registerForm.controls['confirmPassword'].invalid">
+            <div class="alert alert-danger" *ngIf="submitted || registerForm.controls['confirmPassword'].touched || registerForm.controls['confirmPassword'].dirty">
+              <div *ngIf="registerForm.controls['confirmPassword'].errors?.required">
+               this failed required
+              </div>
+              <div *ngIf="registerForm.controls['confirmPassword'].errors?.confirmedValidator">
+                Password and Confirm Password must be match
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="forget-password">
+          <input type="checkbox" formControlName="acceptTerms" required>
+          <label for="">I agree to the Term & Policy</label>
+          <div class="alert alert-danger" *ngIf="submitted && registerForm.controls['acceptTerms'].invalid">
+            <div *ngIf="registerForm.controls['acceptTerms'].errors?.required">
+              Accept Ts & Policy is required
+            </div>
+          </div>
+        </div>
+
+        <input type="submit" value="CREATE AN ACCOUNT">
+        <div *ngIf="showError" class="alert alert-danger">
+          {{errorMessage}}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+.event-header
+{
+    background-image: url('../../../assets/images/eventHeader.jpg');
+    height: 400px;
+    align-items: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 110px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.event-header h4
+{
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+.event-header h3
+{
+    text-transform: capitalize;
+    font-size: 30px;
+    letter-spacing: .07em;
+}
+.event
+{
+  margin-bottom: 100px;
+}
+.event .event-intro,.error-handel
+{
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 90px;
+}
+.event .event-intro h4
+{
+  color: #999;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .35em;
+}
+.event .event-intro h1
+{
+  letter-spacing: .01em;
+  margin-bottom: 20px !important;
+}
+.event .event-intro p
+{
+  color: #7b7474;
+  font-size: 19px;
+  width: 600px;
+  margin: auto;
+}
+.event .event-list,.error-handel
+{
+  margin: auto;
+  width: 920px;
+}
+.event .event-list .event-date-location-title
+{
+  display: flex;
+  align-items: baseline;
+  color: #999999 !important;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+.event .event-list:not(:last-child)
+{
+  border-bottom: 1px solid #e1e1e1;
+}
+.event .event-list .event-date-location-title .event-date-location
+{
+  display: flex;
+  flex-basis: 44%;
+  align-items: baseline;
+}
+.event .event-list .event-date-location-title .event-date-location::before
+{
+  content: "";
+  display: block;
+  width: 1px;
+  background-color: #999;
+  height: 20px;
+  position: absolute;
+  left: 650px;
+}
+.event .event-list .event-date-location-title .date
+{
+  font-size: 13px;
+  font-family: "Josefin Sans",sans-serif;
+  color: #999;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+}
+.event .event-list .event-date-location-title .event-holder span
+{
+  font-size: 13px;
+  color: #999999;
+  font-weight: 400;
+  margin: 0 15px;
+}
+.event .event-list .event-date-location-title .event-location
+{
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: .35em;
+
+}
+.event .event-list .event-date-location-title .event-title
+{
+  flex-basis: 35%;
+}
+.event .event-list .event-date-location-title .event-title a
+{
+  color: #000;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+.event .event-list .event-date-location-title .event-title a:hover
+{
+  text-decoration: none;
+  color: #e60024;
+}
+.event .event-list .event-date-location-title .event-buy-ticket
+{
+  display: flex;
+  align-items: center;
+}
+.event .event-list .event-date-location-title .event-buy-ticket a
+{
+  color: #000;
+  border: 1px solid #858483;
+  padding: 13px 33px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 0.29em;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: all .3s ease-in-out;
+}
+.event .event-list .event-date-location-title .event-buy-ticket a:hover
+{
+  text-decoration: none;
+  color: #fff;
+  background-color: #000;
+  outline: none;
+}
